@@ -1,0 +1,24 @@
+name: Build ItemSpawner
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: unzip -o itemspawner-source.zip
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '21'
+      - uses: gradle/actions/setup-gradle@v4
+        with:
+          gradle-version: current
+      - run: gradle build --no-daemon
+        working-directory: itemspawner
+      - uses: actions/upload-artifact@v4
+        with:
+          name: ItemSpawner
+          path: itemspawner/build/libs/itemspawner-1.0.0.jar
