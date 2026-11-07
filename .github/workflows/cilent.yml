@@ -1,4 +1,4 @@
-name: Build ItemSpawner
+name: Build Sel Hub cilent
 on:
   workflow_dispatch:
 permissions:
@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - run: unzip -o itemspawner-source.zip
+      - run: unzip -o sel-hub-mod.zip
       - uses: actions/setup-java@v4
         with:
           distribution: temurin
@@ -21,4 +21,4 @@ jobs:
       - uses: actions/upload-artifact@v4
         with:
           name: ItemSpawner
-          path: itemspawner/build/libs/itemspawner-1.0.0.jar
+          path: sel-hub-mod/build/libs/itemspawner-1.0.0.jar
