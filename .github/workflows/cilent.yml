@@ -21,4 +21,4 @@ jobs:
       - uses: actions/upload-artifact@v4
         with:
           name: SEI-HUB
-          path: anchor-charge/build/libs/anchor-charge-1.0.0.jar
+          path: anchor-charge/build/libs/sel-hub-cilent-1.0.0.jar
