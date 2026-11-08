@@ -1,4 +1,4 @@
-name: Build SEI HUB
+name: Build SEI HUB cilent 26.3
 on:
   workflow_dispatch:
 permissions:
