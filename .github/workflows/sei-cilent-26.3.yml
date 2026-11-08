@@ -1,4 +1,4 @@
-name: Build SEI HUB cilent 26.3
+name: Build SEI HUB
 on:
   workflow_dispatch:
 permissions:
@@ -21,4 +21,4 @@ jobs:
       - uses: actions/upload-artifact@v4
         with:
           name: SEI-HUB
-          path: anchor-charge/build/libs/anchor-charge-26.3.jar
+          path: anchor-charge/build/libs/anchor-charge-1.0.0.jar
